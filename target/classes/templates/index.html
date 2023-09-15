@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libradmin</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <link rel="shortcut icon" href="booke.png" type="image/x-icon" />
+    <link
+      th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css}"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <img
+          class="d-block mx-auto"
+          src="booke.png"
+          alt=""
+          width="55"
+          height="45"
+        />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a th:href="@{/}" class="nav-link" id="home-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a th:href="@{/userList}" class="nav-link" id="user-list-link"
+                >Users List</a
+              >
+            </li>
+            <li class="nav-item">
+              <a th:href="@{/newUser}" class="nav-link" id="new-user-link"
+                >New User</a
+              >
+            </li>
+            <li class="nav-item">
+              <a th:href="@{/bookList}" class="nav-link" id="books-list-link"
+                >Books List</a
+              >
+            </li>
+            <li class="nav-item">
+              <a th:href="@{/newBook}" class="nav-link" id="new-book-link"
+                >New Book</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVBAR -->
+
+    <div class="px-4 py-4 my-4 text-center">
+      <img
+        class="d-block mx-auto mb-4"
+        src="booke.png"
+        alt=""
+        width="172"
+        height="157"
+      />
+      <h1 class="display-5 fw-bold text-body-emphasis">Libradmin</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4 py-2 border-bottom border-top">
+          A user-friendly application meticulously designed for efficient
+          library management. It simplifies the administration of books and user
+          accounts. Seamlessly manage your library with ease using Libradmin!
+        </p>
+
+        <!-- BUTTONS -->
+        <div class="d-flex gap-2 flex-wrap d-sm-flex justify-content-sm-center">
+          <div class="d-flex flex-column gap-2">
+            <!-- 1 -->
+            <button
+              type="button"
+              class="btn px-3"
+              style="background-color: white; border-color: #0d6efd"
+            >
+              <a
+                th:href="@{/userList}"
+                class="link-underline link-underline-opacity-0"
+                style="color: #0d6efd"
+                >Users</a
+              >
+            </button>
+            <hr class="my-2" />
+            <button
+              type="button"
+              class="btn px-3"
+              style="background-color: white; border-color: #0d6efd"
+            >
+              <a
+                th:href="@{/bookList}"
+                class="link-underline link-underline-opacity-0"
+                style="color: #0d6efd"
+                >Books</a
+              >
+            </button>
+          </div>
+
+          <!-- 2 -->
+          <div class="d-flex flex-column gap-2">
+            <button
+              type="button"
+              class="btn px-3"
+              style="background-color: white; border-color: rgb(207, 82, 92)"
+            >
+              <a
+                th:href="@{/newUser}"
+                class="link-underline link-underline-opacity-0"
+                style="color: rgb(207, 82, 92)"
+                >Add User</a
+              >
+            </button>
+            <hr class="my-2" />
+            <button
+              type="button"
+              class="btn px-3"
+              style="background-color: white; border-color: rgb(207, 82, 92)"
+            >
+              <a
+                th:href="@{/newBook}"
+                class="link-underline link-underline-opacity-0"
+                style="color: rgb(207, 82, 92)"
+                >Add Book</a
+              >
+            </button>
+          </div>
+        </div>
+        <!-- BUTTONS -->
+      </div>
+    </div>
+    <script src="navbar.js"></script>
+    <script src="userManagement.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
